@@ -1,31 +1,266 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Jace Griffin - Programming Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.15);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 45%, #000 100%);
+      color: var(--text);
+    }
+    header {
+      padding: 32px 16px 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.9), rgba(15,23,42,0.6));
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 20;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    nav {
+      margin-top: 12px;
+    }
+    nav a {
+      display: inline-block;
+      margin: 4px 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.85rem;
+      transition: all 0.15s ease;
+    }
+    nav a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    section {
+      margin-bottom: 32px;
+      padding: 20px;
+      border-radius: 16px;
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.05), transparent 55%);
+      border: 1px solid var(--border);
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+    .course-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.75rem;
+      margin-left: 4px;
+    }
+    .project {
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+      margin-top: 14px;
+      background: rgba(15,23,42,0.9);
+    }
+    .project h3 {
+      margin: 0 0 4px;
+      font-size: 1.05rem;
+    }
+    .project-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .project p {
+      margin: 0 0 6px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      margin-right: 6px;
+      margin-top: 4px;
+      color: var(--muted);
+    }
+    .project-links {
+      margin-top: 6px;
+    }
+    .project-links a {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      margin-right: 6px;
+      margin-top: 4px;
+      transition: all 0.15s ease;
+    }
+    .project-links a:hover {
+      background: var(--accent);
+      color: #020617;
+    }
+    .note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    footer {
+      text-align: center;
+      padding: 14px 8px 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to Home Page</h1>
+  <h1>Jace Griffin</h1>
+  <p>Programming Portfolio – COSC 1436 • 1437 • 2436</p>
+  <nav>
+    <a href="#cosc1436">COSC 1436</a>
+    <a href="#cosc1437">COSC 1437</a>
+    <a href="#cosc2436">COSC 2436</a>
+    <a href="#github">GitHub</a>
+  </nav>
 </header>
 
-<nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="page2.html">Page 2</a>
-    <a href="page3.html">Page 3</a>
-</nav>
+<main>
 
-<div id="main-content">
-    <img src="https://via.placeholder.com/150" alt="Sample Image"><br><br>
+  <!-- COSC 1436 -->
+  <section id="cosc1436">
+    <h2>COSC 1436 – Programming Fundamentals</h2>
 
-    <dl>
-        <dt>Term One</dt>
-        <dd>Description for term one.</dd>
-        <dt>Term Two</dt>
-        <dd>Description for term two.</dd>
-    </dl>
+    <div class="project">
+      <h3>Final Course Application – Payroll Management System</h3>
+      <div class="project-meta">Language: C</div>
+      <p>A payroll system calculating manager, hourly, and commission worker pay...</p>
+      <div class="project-links">
+        <a href="#" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>Group Project – Apartment Rental Program</h3>
+      <div class="project-meta">Language: Java</div>
+      <p>A LinkedList-based apartment sorter that orders apartments by rent.</p>
+      <div class="project-links">
+        <a href="#" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COSC 1437 -->
+  <section id="cosc1437">
+    <h2>COSC 1437 – Programming II</h2>
+
+    <div class="project">
+      <h3>Final Course Application – Student Management System</h3>
+      <div class="project-meta">Language: Java</div>
+      <p>Tracks multiple courses, students, grades, scholarships, and averages.</p>
+      <div class="project-links">
+        <a href="#" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>Quiz Analyzer – Classes Project</h3>
+      <div class="project-meta">Language: Java</div>
+      <p>Reads quiz scores, validates inputs, tracks min/max/average.</p>
+      <div class="project-links">
+        <a href="#" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COSC 2436 -->
+  <section id="cosc2436">
+    <h2>COSC 2436 – Data Structures</h2>
+
+    <div class="project">
+      <h3>SLO #1 – PriorityQueue Set Operations</h3>
+      <div class="project-meta">Java</div>
+      <p>Union, difference, and intersection using PriorityQueue + HashSet.</p>
+      <div class="project-links">
+        <a href="#" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>SLO #5 – Number Manager GUI</h3>
+      <div class="project-meta">Java</div>
+      <p>Swing GUI app manipulating LinkedList integers with sorting and shuffling.</p>
+      <div class="project-links">
+        <a href="#" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>SLO #6 – Apartment List LinkedList</h3>
+      <div class="project-meta">Java</div>
+      <p>Apartment objects stored in a LinkedList and sorted via compareTo().</p>
+      <div class="project-links">
+        <a href="#" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub -->
+  <section id="github">
+    <h2>GitHub Account</h2>
+    <p>This serves as proof of my GitHub account for coursework verification.</p>
+    <p><strong>GitHub Profile:</strong> 
+      <a href="https://github.com/jqckboy" target="_blank">github.com/jqckboy</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Jace Griffin • Programming Portfolio
+</footer>
+
+</body>
+</html>
+
 
     <p class="highlight">This paragraph uses a class selector to highlight text.</p>
 </div>
